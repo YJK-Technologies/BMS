@@ -68,9 +68,9 @@ const login = async (req, res) => {
     saveErrorLog({
       user: decryptedUserCode,
       spName,
-      errorMessage: err.message,
+      errorMessage: error.message,
     });
-    return res.status(500).json({ message: err.message || "Internal Server Error" });
+    return res.status(500).json({ message: error.message || "Internal Server Error" });
   } finally {
     // Close the connection
     await sql.close();
