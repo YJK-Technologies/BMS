@@ -1,0 +1,338 @@
+.feedback-form {
+    color:#ffffff;
+    max-width: 500px; /* Limit width on larger screens */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgb(254,30,142);
+    background: radial-gradient(circle, rgba(254,30,142,1) 0%, rgba(42,32,147,1) 100%);
+}
+
+.progress-indicator {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1; /* Ensure buttons share space evenly */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.star{
+    color:#ffffff
+}
+
+.question {
+    margin-bottom: 20px; /* Space between questions */
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column; /* Arrange options vertically */
+    gap: 10px; /* Space between options */
+}
+
+.option-label {
+    display: flex; /* Align the input and label text */
+    align-items: center; /* Center the input with the text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 10px; /* Add padding for touch targets */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.2s; /* Smooth hover effect */
+}
+
+.option-label:hover {
+    background-color: #e9ecef; /* Light gray on hover */
+}
+
+.option-label input {
+    margin-right: 10px; /* Space between the radio input and text */
+}
+
+.progress-indicator{
+    display: flex;
+    justify-content: center;
+   }
+
+   .feedback-form {
+  
+    margin-top: 120px;
+   
+}
+
+
+
+textarea {
+    width: 100%; 
+    height: 100px;
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    resize: vertical; 
+    font-size: 16px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+textarea:focus {
+    border-color: #007bff; 
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 480px) {
+   .progress-indicator{
+    display: flex;
+    justify-content: center;
+   }
+    
+    
+    
+    .feedback-form {
+        padding: 15px; 
+        margin-top: 18px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .button-group {
+        flex-direction: row;
+        display: flex;
+        align-items:center;
+        justify-content: space-between;  /* Stack buttons on small screens */
+    }
+
+    .btn-secondary,
+    .submit-button {
+        width: 100px; /* Make buttons full width */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px;
+        display: flex;
+        align-items:center;
+        justify-content: center; /* Add space between stacked buttons */
+    }
+
+    .options-container {
+        gap: 15px; /* Increased gap between options for better touch targets */
+    }
+
+    .option-label {
+        padding: 12px; /* Increased padding for better touchability */
+    }
+
+    h5 {
+        font-size: 16px; /* Slightly smaller heading on mobile */
+    }
+}
+
+
+
+.Submitbutton{
+    border: 0;
+    border-radius: 10px;
+    background: rgb(0, 119, 255);
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+/* From Uiverse.io by suda-code */ 
+button {
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(254,30,142,1) 0%, rgba(42,32,147,1) 100%);
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+ 
+  
+  button:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+  }
+  
+  button:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+
+
+
+  /* FeedbackForm.css */
+.feedback-form {
+    position: relative;
+}
+
+.form-container {
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.form-container.next {
+    transform: translateX(-0%);
+}
+
+.form-container.prev {
+    transform: translateX(-0%);
+}
+
+.form-container.next .question,
+.form-container.prev .question {
+    opacity: 0; /* Fade out during transition */
+}
+
+.form-container.next .question {
+    animation: fadeInRight 0.5s forwards;
+}
+
+.form-container.prev .question {
+    animation: fadeInLeft 0.5s forwards;
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+p{
+    text-align: center;
+}
+
+.toast-design{
+    /* margin-top: 50px; */
+    width : "430px",
+  }
+
+  
+  @media (max-width: 768px) {
+    .toast-design {
+      width: 90%; 
+      margin: 10px auto;
+    }
+  }
+
+  .mic-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    .circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transition: .5s;
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+      
+      .icon{
+        color: #b2b1b1;
+        font-size: 23px;
+        transition: .9s;
+      }
+          
+      &:before {
+        content: '';
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        opacity: .2;
+        z-index: -1;
+        position:absolute;
+      }
+    }
+    
+    .circle.active {
+      background: #ff0000;
+      
+      &:before {
+          background: gray;
+          animation: bounce .8s ease-in-out infinite .5s;
+        }
+        
+        .icon {
+          color: #ffffff;
+        }
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    };
+    25% {
+      transform: scale(1.4);
+    }
+    75% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.3);
+    }
+    
+    
+  }

@@ -1,0 +1,32 @@
+
+.star-rating {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    
+}
+
+.star {
+    font-size: 42px;
+    color: lightgray; 
+    margin: 0 2px;
+
+}
+
+.star.filled {
+    color: gold; 
+
+}
+
+.toast-design{
+    /* margin-top: 50px; */
+    width : "430px",
+  }
+
+  
+  @media (max-width: 768px) {
+    .toast-design {
+      width: 90%; 
+      margin: 10px auto;
+    }
+  }

@@ -1,0 +1,29 @@
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .dashboardBg {
+    
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    
+    // Adjust the gradient and animation settings
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #4bc0c8, #ff6ec4);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+  
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+  

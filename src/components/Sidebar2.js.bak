@@ -1,0 +1,169 @@
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faUserTie, faChartLine, faUser, faUserCheck, faArrowRightFromBracket, faAddressBook, faUpload } from '@fortawesome/free-solid-svg-icons';
+import '../Css/Sidebar2.css';
+import  logo from './logo.PNG';
+import { ToastContainer, toast } from 'react-toastify';
+import {showConfirmationToast}  from './ToastConfirmation'; 
+import Logo from '../images/logo.png';
+
+
+function Sidebar() {
+  const [isClosed, setIsClosed] = useState(true);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const userImageBase64 = sessionStorage.getItem('user_image');
+  const user_code = sessionStorage.getItem('selectedUserCode');
+  const userImageSrc = userImageBase64 ? `data:image/png;base64,${userImageBase64}` : null;
+  const navigate = useNavigate();
+  const toggleNav = () => {
+    setIsClosed(!isClosed);
+    if (window.innerWidth <= 768) {
+      setIsMobileOpen(!isMobileOpen);
+    }
+  };
+
+  const handleNavigatesToForm = () => {
+    navigate("/Master"); 
+  };
+
+    const BoothStatistics = () => {
+    navigate("/BoothStatistics"); 
+  };
+
+  const Report = () => {
+    navigate("/VoterList"); 
+  };
+
+  const Feed = () => {
+    navigate("/Feedback"); 
+  };
+
+  const dash = () => {
+    navigate("/Dashboard"); 
+  };
+
+  const roleRights = () => {
+    navigate("/RoleRights");
+  };
+
+  const User = () => {
+    navigate("/User"); 
+  };
+
+  const Role = () => {
+    navigate("/Role"); 
+  };
+
+  const BoothWiseList = () => {
+    navigate("/BoothWiseList");
+  };
+
+  useEffect(() => {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    if (!isLoggedIn) {
+      navigate('/');
+    }
+  }, [navigate]);
+
+
+  const handleLogout = () => {
+    showConfirmationToast(
+      "Are you sure you want to log out?",
+      () => {
+        localStorage.clear();
+        sessionStorage.removeItem('isLoggedIn');
+        sessionStorage.removeItem('permissions');
+        sessionStorage.removeItem('screenTypes');
+        navigate('/');
+      },
+      () => {
+        toast.info("Logout cancelled");
+      }
+    );
+  };
+  
+
+  const permissionsJSON = sessionStorage.getItem("permissions");
+  const permissions = permissionsJSON ? JSON.parse(permissionsJSON) : [];
+  const screenType = Array.isArray(permissions)
+    ? permissions.map((permission) =>
+        permission.screen_type.replace(/\s+/g, "")
+      )
+    : [];
+
+  return (
+    <div className={`sidebar ${isClosed ? 'closed' : ''} ${isMobileOpen ? 'open' : ''}`} id="mySidebar">
+<div className="sidebar-header">
+  <ToastContainer position="top-right" className="toast-design" theme="colored" />
+
+  {/* 👇 ADMK Logo Added */}
+  <img
+    src={Logo} // <-- change this to actual path
+    alt="ADMK"
+    className="admk-logo me-2"
+  />
+
+  <h3 className='d-none'>Menu</h3>
+
+  <sidebutton className="toggle-btn">
+    {userImageSrc ? (
+      <div className='User d-flex align-items-center'>
+        <img
+          src={userImageSrc}
+          width="35"
+          height="35"
+          className="avatar-placeholder rounded-circle bg-primary text-white d-flex justify-content-center align-items-center"
+          title={user_code}
+          onClick={toggleNav}
+        />
+        <label className="ms-3 text-white">{user_code}</label>
+      </div>
+    ) : (
+      <div className="User d-flex align-items-center">
+        <div
+          className="avatar-placeholder rounded-circle bg-primary text-white d-flex justify-content-center align-items-center"
+          style={{ width: '35px', height: '35px', fontSize: '20px', cursor: 'pointer' }}
+          title={user_code}
+          onClick={toggleNav}
+        >
+          {user_code ? user_code.charAt(0) : 'U'}
+        </div>
+        <label className="ms-3 text-white">{user_code}</label>
+      </div>
+    )}
+  </sidebutton>
+</div>
+      {screenType.includes("Dashboard") && (
+      <a className='pe-auto' onClick={dash} title='Dashboard'><FontAwesomeIcon icon={faChartLine} className='me-3' /> <span>Dashboard</span></a>
+      )}
+      {screenType.includes("Master") && (
+      <a  className='pe-auto' onClick={handleNavigatesToForm} title='Master'><FontAwesomeIcon icon={faAddressBook} className='me-3 pe-auto' /> <span>Master</span></a>
+      )}
+      {screenType.includes("User") && (
+      <a  className='pe-auto' onClick={User} title='User'><FontAwesomeIcon icon={faUser} className='me-3 pe-auto' /> <span>User</span></a>
+      )}
+      {screenType.includes("Role") && (
+      <a  className='pe-auto' onClick={Role} title='Role'><FontAwesomeIcon icon={faUserTie} className='me-3 pe-auto' /> <span>Role</span></a>
+      )}
+      {screenType.includes("RoleRights") && (
+      <a  className='pe-auto' onClick={roleRights} title='Role Rights'><FontAwesomeIcon icon={faUserCheck}   className='me-3 pe-auto' /> <span>Role Rights</span></a>
+      )}
+      {screenType.includes("VoterList") && (
+      <a  className='pe-auto' onClick={Report} title='Voter List'><FontAwesomeIcon icon={faUpload} className='me-3 pe-auto' /> <span>Voter List</span></a>
+      )}
+      {screenType.includes("BoothWiseList") && (
+      <a  className='pe-auto' onClick={BoothWiseList} title='Booth Wise List'><FontAwesomeIcon icon={f       {screenType.includes("BoothStatistics") && (
+                <a className='pe-auto' onClick={BoothStatistics} title='Logout'><FontAwesomeIcon icon={faArrowRightFromBracket} className='me-3 pe-auto' /> <span>Stats</span></a>
+        )}
+      <a className='pe-auto' onClick={handleLogout} title='Logout'><FontAwesomeIcon icon={faArrowRightFromBracket} className='me-3 pe-auto' /> <span>Logout</span></a>
+      <div className="sidebar-footer">
+        <img src={logo} width={50} height={50} />
+        <h3 className=''>YJK Technologies</h3>
+        <h3 className=''>Version 1.0.0</h3>
+      </div>
+    </div>
+  );
+}
+
+export default Sidebar;

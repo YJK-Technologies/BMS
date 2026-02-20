@@ -1,0 +1,73 @@
+.question {
+    margin-bottom: 20px; /* Space between questions */
+    padding: 15px; /* Padding around the question */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f4f4f4; /* Light background for the question */
+    
+}
+
+h5 {
+    font-size: 18px; /* Adjust heading size */
+    color: #333; /* Darker text color for contrast */
+    margin-bottom: 10px; /* Space below the question title */
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column; /* Arrange options vertically */
+    gap: 15px; /* Space between options */
+}
+
+.option-label {
+    display: flex; /* Align the input and label text */
+    align-items: center; /* Center the input with the text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 10px; /* Padding for the option labels */
+    border: 1px solid #ccc; /* Border for option labels */
+    border-radius: 5px; /* Rounded corners for option labels */
+    transition: background-color 0.3s, border 0.3s; /* Smooth transition for hover effect */
+}
+
+.option-label:hover {
+    background-color: #e2f7e2; /* Light green on hover */
+    border-color: #5cb85c; /* Darker green border on hover */
+}
+
+.option-label input {
+    margin-right: 10px; /* Space between the radio input and text */
+    accent-color: #5cb85c; /* Change radio input color (for modern browsers) */
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 480px) {
+    .question {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    h5 {
+        font-size: 16px; /* Slightly smaller heading size on mobile */
+    }
+
+    .options-container {
+        gap: 10px; /* Reduce gap for options on mobile */
+    }
+
+    .option-label {
+        padding: 12px; /* Adjust padding for better touch targets */
+        font-size: 16px; /* Slightly larger text for easier readability */
+    }
+}
+
+
+.toast-design{
+    /* margin-top: 50px; */
+    width : "430px",
+  }
+
+  
+  @media (max-width: 768px) {
+    .toast-design {
+      width: 90%; 
+      margin: 10px auto;
+    }
+  }

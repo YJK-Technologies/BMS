@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+purButton {
+  background: linear-gradient(0deg, rgba(254,30,142,1) 0%, rgba(42,32,147,1) 100%);
+  color: white;
+  padding: 10px 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0.5px 0.5px 5px 0px rgb(65, 99, 126);
+  transition: 0.8s;
+  font-weight: 500;
+  font-family: poppins;
+  transition: background-color 0.8s ease, color 0.9s ease;
+}
+
+purButton:hover {
+  background: linear-gradient(0deg, rgba(254,30,142,1) 0%, rgba(42,32,147,1) 100%);
+  color: rgb(253, 253, 253);
+  opacity: 0.7;
+  transition: 0.8s;
+  transform: scale3d(1.05);
+}
+
+delbutton {
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+  /* padding-left: 30px; */
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin: 5px 5px 5px 2px;
+  }
+
+  printbutton{
+    color: rgb(0, 0, 0);
+    padding-right: 30px;
+    padding-top: 10px;
+    cursor: pointer;
+    padding-bottom: 0px;
+    margin: 5px 5px 5px 2px;
+    }

@@ -1,0 +1,446 @@
+body{
+  /* background: #FFEFEF; */
+}
+
+.dashboard {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.rating-stars {
+  font-size: 24px;
+  display: flex;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.custom-card {
+  width: 100%;
+  height: auto;
+  min-height: 140px;
+  max-width: 100%;
+}
+
+/* Tablet and up (768px and above) */
+@media (min-width: 768px) {
+  .custom-card {
+    width: 100%;
+    height: 140px;
+  }
+}
+
+/* Desktop and up (992px and above) */
+@media (min-width: 992px) {
+  .custom-card {
+    width: 430px;
+    height: 140px;
+  }
+}
+
+.responsive-icon {
+  width: 50px;
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+  .responsive-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .responsive-icon {
+    width: 90px;
+    height: 90px;
+    overflow: visible; 
+  }
+}
+
+.card-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.card-text-container h2 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.card-text-container p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .card-text-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-text-container p {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}
+
+.dashboardBg {
+  display: flex;
+  flex-direction: column; /* Make it vertical */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto; /* Center the divs */
+}
+
+.mobdash {
+  margin-left: 0;
+}
+/* Responsive Styles */
+
+/* Tablet View (768px and below) */
+@media (min-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+  
+  .content {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px;
+  }
+
+  .rating-stars {
+    font-size: 20px; /* Reduce size for smaller screens */
+  }
+
+ 
+  .dashboardBg {
+    margin-bottom: 20px;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+
+
+/* Mobile View (576px and below) */
+@media (max-width: 576px) {
+  body {
+    font-size: 13px;
+  }
+
+  .ag-paging-row-summary-panel{
+    display: none;
+  }
+
+  .dashboard {
+    padding: 5px;
+  }
+
+  .content {
+    gap: 10px;
+  }
+
+  .rating-stars {
+    font-size: 18px;
+  }
+
+ 
+
+  .dashboardBg {
+    padding: 5px;
+  }
+}
+
+/* Large Laptop View (992px and below) */
+@media (max-width: 992px) {
+  .dashboard {
+    padding: 15px;
+  }
+
+  .content {
+    gap: 15px;
+  }
+
+  .rating-stars {
+    font-size: 22px;
+  }
+
+ 
+  .dashboardBg {
+    padding: 18px;
+  }
+}
+
+/* Extra Small Mobile View (375px and below) */
+@media (max-width: 375px) {
+  .rating-stars {
+    font-size: 16px;
+  }
+
+  .dashboardBg {
+    padding: 5px;
+  }
+
+
+}
+
+
+
+/* CSS to show only on mobile (small screens) */
+.mobile-only {
+  display: block;
+}
+
+@media (min-width: 800px) {
+  .mobile-only {
+    display: none;
+  }
+  .ag-picker-field .ag-labeled .ag-label-align-left .ag-select 
+  .ag-wrapper .ag-picker-field-wrapper .ag-picker-collapsed .ag-paging-row-summary-panel{
+    
+    display: none;
+
+  }
+}
+
+
+.cell-good {
+  background-color: #4CAF50; /* Darker green */
+  border-radius:50px;
+}
+
+.cell-average {
+  background-color: #FFD700; 
+  border-radius:50px;
+}
+
+.cell-poor {
+  background-color: #FF0000; /* Darker red */
+  color:#fff;
+  border-radius:50px;
+}
+
+.chart{
+  /* background-color: #FFF7FC; */
+  background-color: #FFF7FC;
+}
+
+
+
+
+/* Dashboard.css */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-family: Arial, sans-serif;
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+
+.custom-audio-player {
+  width: 100%;              
+  max-width: 100%;            
+  height: 30px;             
+  border-radius: 5px;       
+  border: 1px solid #ddd;     
+  background-color: #f7f7f7;  
+  margin: 5px 0;            
+}
+
+/* Add custom controls style for the audio */
+.custom-audio-player::-webkit-media-controls-panel {
+  background-color: #f7f7f7;
+}
+
+.custom-audio-player::-webkit-media-controls-play-button {
+  background-color: #4CAF50; 
+}
+
+.custom-audio-player::-webkit-media-controls-volume-slider {
+  background-color: #ddd;    
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown button styling */
+.dropdown-btn {
+  background-color: none;
+  background: 0;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.dropdown-btn:hover{
+  background-color:none;
+  background: none;
+  border:none;
+  box-shadow:none
+}
+
+/* SVG Icon inside the button */
+.dropdown-btn svg {
+  margin-left: 50px;
+  width: 25px;
+  height: 25px;
+ 
+}
+
+/* The dropdown menu (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Dropdown items styling */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(188, 188, 188);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  
+  .graph-path {
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 1;
+    fill: none;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 0;
+    animation: drawGraph 5s ease-in-out infinite, glow 2s ease-in-out infinite;
+    fill: none; 
+  }
+  
+  @keyframes drawGraph {
+    0% {
+      stroke-dashoffset: 200;
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -200;
+    }
+  }
+
+  @keyframes glow {
+    0% {
+      stroke: #ffffff;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+    50% {
+      stroke: #ffffff;
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+    }
+    100% {
+      stroke: #ffffff;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+  }
+
+
+.bg-primary {
+  background-image: linear-gradient(to right, #002f4b, #005b96, #0074d9, #4169e1, #6a5acd);
+  background-size: 300% 300%;
+  animation: gradientBackground 8s ease infinite;
+  color: white;
+}
+.bg-success {
+  background-image: linear-gradient(to right, #ffe259, #ffa751, #ff7e5f, #f76c6c, #f44336);
+  background-size: 300% 300%;
+  animation: gradientBackground 8s ease infinite;
+  color: white;
+}
+.bg-danger {
+  background-image: linear-gradient(to right, #ff6b6b, #ff4c60, #e63946, #d00000, #a4161a);
+  background-size: 300% 300%;
+  animation: gradientBackground 8s ease infinite;
+  color: white;
+}
+.bg-info {
+    background-image: linear-gradient(to right, #007c2e, #1D976C, #2ecc71, #00b894, #26de81);
+  background-size: 300% 300%;
+  animation: gradientBackground 8s ease infinite;
+  color: white;
+}
+  
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+   @keyframes glow {
+    0% {
+      stroke: #ffffff;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+    50% {
+      stroke: #ffffff;
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+    }
+    100% {
+      stroke: #ffffff;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+  }

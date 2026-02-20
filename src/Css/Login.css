@@ -1,0 +1,552 @@
+.body {
+  background-color: #0b6b1a;
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+
+.laptopimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vh;
+  height: 100vh;
+  margin-left:50px;
+  z-index: 0; 
+}
+
+
+.button-login{
+  background-color: #006e1c;
+  background: #006e1c;
+}
+
+
+
+.body {
+  background-color: #0b6b1a;
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+
+
+.laptopimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vh;
+  height: 90vh;
+  margin-left:8px;
+  z-index: 0;
+  margin-top:150px
+}
+.devicetop {
+  position: absolute;
+  background: grey;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px; /* Adjust size */
+  z-index: 10; /* Make sure it's above background and visible */
+}
+.devicetop {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 100%;
+  max-width: 1950px;
+  z-index: 10;
+}
+
+.horizontal-row {
+  display: flex;
+  align-items: center; /* vertically center text and image */
+  justify-content: center; /* center the entire row on screen */
+  gap: 20px; /* spacing between items */
+   /* optional spacing from top */
+}
+
+
+.secondtext {
+  font-size: 25px;
+  font-weight: 500px;
+  padding-top:40px;
+  padding-left:180px;
+  padding-right:0px;
+  color: white;
+}
+
+.firsttext{
+  font-size: 28px;
+  font-weight: 500px;
+  padding-top:40px;
+  padding-left:0;
+  padding-right: 150px;
+  color: white;
+}
+
+
+.secondtext{
+  position: absolute;
+ background: grey;
+  top: 0px;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 520px; 
+  z-index: 5; 
+}
+
+
+.secondtext{
+  position: absolute;
+   background: grey;
+  top: 0px;
+  left: 10%;
+  width: 820px;
+  height:126px;
+  z-index: 10;
+}
+
+
+.firsttext{
+  position: absolute;
+   background: grey;
+  top: 0px;
+  right: 10%;
+  transform: translateX(50%);
+  width: 520px; 
+  z-index: 5; 
+}
+
+
+.firsttext{
+  position: absolute;
+  top: 0px;
+  right: 10%;
+  width: 820px;
+  height:126px;
+  z-index: 10;
+}
+
+
+.main-wrapper, .login-box {
+
+  z-index: 2; 
+  top:0%;
+  left:30%;
+  right:20%;
+
+}
+
+
+.main-wrapper{
+  margin-right: 100px;
+}
+
+
+
+.login-box {
+  border-radius: 30px;
+  border: 8px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #00924e, #004609);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width:300px;
+}
+
+
+
+
+.login-box {
+  width: 350px;
+
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.login-box h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 35px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.eye-icon, .user-icon, .lock-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.main-image-mobiles {
+    display:none;
+  }
+
+
+
+
+
+
+
+
+
+  @media  (max-width: 1440px) {
+
+
+.laptopimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vh;
+  height: 100vh;
+  z-index: 0; 
+
+}
+
+
+.button-login{
+  background-color: #006e1c;
+  background: #006e1c;
+}
+
+
+
+.body {
+  background-color: #0b6b1a;
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+
+
+.laptopimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  max-width:1420px;
+  height: 100%;
+  max-height:80vh;
+  z-index: 0;
+}
+
+
+
+ .login-box {
+  position: relative;
+  z-index: 2; 
+  top:2%;
+  left:0%;
+  margin-top:150px;
+  
+}
+
+
+.devicetop {
+  position: absolute;
+  background: grey;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1600px;
+   /* Adjust size */
+  z-index: 5; /* Make sure it's above background and visible */
+}
+.devicetop {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  
+  z-index: 15;
+  padding-bottom:3px;
+}
+
+.horizontal-row {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+
+.secondtext {
+  font-size: 15px;
+  font-weight: 500;
+  background: grey !important;
+  padding-left:250px;
+  padding-top: 50px;
+  color: white;
+  padding-bottom:76px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.firsttext{
+  font-size: 15px;
+  font-weight: 500;
+  background: grey !important;
+  font-family: 'DM Serif Text', serif;
+  padding-left:0;
+  padding-top: 50px;
+  color: white;
+}
+
+.secondtext{
+  position: absolute;
+  background: grey !important;
+  top: 0px;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 520px; 
+  z-index: 10; 
+}
+
+.secondtext{
+  position: absolute;
+  top: 0px;
+  left: 2%;
+  width: 820px;
+  height:100px;
+  z-index: 10;
+}
+
+.firsttext{
+  position: absolute;
+ 
+  top: 0px;
+  right: 2%;
+  transform: translateX(50%);
+  width: 520px; 
+  z-index: 5; 
+}
+
+
+.firsttext{
+  position: absolute;
+  top: 0px;
+  right: 5%;
+  width: 820px;
+  height:126px;
+  z-index: 10;
+}
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .body {
+    background-color: #0b6b1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-family: sans-serif;
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .laptopimg,
+  .firsttext,
+  .secondtext,
+  .main-image-mobiles {
+    display: none !important;
+  }
+
+  .mainimage {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    margin: 0px 0 10px 0;
+  }
+
+  .devicetop {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+    background: grey;
+    height:100%;
+    max-height: 80px;
+    z-index: 10;
+  }
+
+  .ammagroup {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    margin: 80px auto 0px auto;
+    z-index: 10;
+    
+  }
+
+  .logo-yjk {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 0px;
+    margin-top:0;
+    z-index: 1;
+
+  }
+
+  .main-wrapper {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    z-index: 1;
+    margin-top:0;
+  }
+
+  .login-box {
+    width: 100%;
+    max-width: 350px;
+    min-width: 280px;
+    min-height: 400px;
+    padding: 20px 10px;
+    margin-top:10px;
+    margin-left:0px;
+    padding-left:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    border: 6px solid;
+    border-image: linear-gradient(to right, #00924e, #004609) 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .login-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
+
+  .input-box {
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .input-box input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 35px 10px 10px;
+    font-size: 16px;
+  }
+
+  .eye-icon, .user-icon, .lock-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .button-login {
+    background-color: #006e1c;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .horizontal-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+}
+
+
+
+
+
+
+
+/* Add perspective to the container */
+.loading-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  text-align: center;
+  perspective: 1000px; /* Enables 3D effect */
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 180px;
+    padding: 30px;
+
+
+}
+
+.logo-blink {
+  width: 100px;
+  height: 100px;
+  animation: blinkLogo 1.5s infinite;
+}
+
+@keyframes blinkLogo {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+.text-white {
+  color: white;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}

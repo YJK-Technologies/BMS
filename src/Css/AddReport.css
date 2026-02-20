@@ -1,0 +1,103 @@
+savebutton{
+    color: rgb(58, 126, 35);
+    padding-right: 30px;
+    padding-top: 10px;
+    cursor: pointer;
+    padding-bottom: 0px;
+    margin: 5px 5px 5px 2px;
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bg-body-primary {
+    background-color: #f8f9fa; /* Light background */
+}
+
+.bg-body-tertiary {
+    background-color: #e9ecef; /* Slightly darker background */
+}
+
+.rounded-3 {
+    border-radius: 0.5rem; /* Rounded corners */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Button Styles */
+.purbut {
+    margin: 0 5px; /* Space between buttons */
+    padding: 8px 12px; /* Button padding */
+}
+
+.purbut:hover {
+    background-color: #007bff;
+    color: white; 
+    transition: background-color 0.3s ease; 
+    border-radius: 12px;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    z-index: 1000; /* Make sure dropdown is above other elements */
+}
+
+.dropdown-item {
+    cursor: pointer; /* Pointer cursor for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1; /* Change background on hover */
+}
+
+.btn{
+  --bs-btn-border-width:0;
+  --bs-btn-border-radius:0;
+}
+
+.dropdown-menu{
+   --bs-dropdown-min-width: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .dropdown {
+        width: 100%; /* Full width for dropdown */
+    }
+
+    .dropdown-toggle {
+        width: 100%; /* Full width for the toggle button */
+        text-align: left; /* Align text to the left */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller heading on mobile */
+    }
+}
+
+/* AG Grid Custom Styles */
+.ag-theme-alpine {
+    border-radius: 0.5rem; /* Rounded corners for AG Grid */
+}
+
+/* Toast Container Customization */
+.toast-design {
+    
+}
+
+
+@media (max-width: 768px) {
+    .toast-design {
+      width: 90%; 
+      margin: 10px auto;
+    }
+  }
